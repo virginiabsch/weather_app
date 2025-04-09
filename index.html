@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clima Hoje | Previsão do Tempo</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Fundo dinâmico baseado no clima -->
+    <div id="dynamic-background" class="dynamic-background"></div>
+    
+    <div class="container">
+        <div class="glass-card">
+            <header>
+                <h1>Clima<span>Hoje</span></h1>
+                <p class="subtitle">Sua previsão do tempo em tempo real</p>
+                
+                <div class="search-container">
+                    <input type="text" id="city-input" placeholder="Digite o nome da cidade...">
+                    <button id="search-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21 21L16.65 16.65M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+            </header>
+
+            <main>
+                <div class="weather-card">
+                    <div class="weather-info hidden" id="weather-info">
+                        <div class="location">
+                            <h2 id="city-name">--</h2>
+                            <p id="date-time">--</p>
+                        </div>
+                        
+                        <div class="current-weather">
+                            <div class="temperature">
+                                <h3 id="temperature">--°C</h3>
+                                <p id="feels-like">Sensação: --°C</p>
+                            </div>
+                            <div class="weather-icon">
+                                <img id="weather-icon" src="" alt="Condição climática">
+                                <p id="weather-description">--</p>
+                            </div>
+                        </div>
+                        
+                        <div class="weather-details">
+                            <div class="detail">
+                                <div class="detail-icon">💧</div>
+                                <div class="detail-info">
+                                    <span class="label">Umidade</span>
+                                    <span id="humidity" class="value">--%</span>
+                                </div>
+                            </div>
+                            <div class="detail">
+                                <div class="detail-icon">💨</div>
+                                <div class="detail-info">
+                                    <span class="label">Vento</span>
+                                    <span id="wind" class="value">-- km/h</span>
+                                </div>
+                            </div>
+                            <div class="detail">
+                                <div class="detail-icon">🔄</div>
+                                <div class="detail-info">
+                                    <span class="label">Pressão</span>
+                                    <span id="pressure" class="value">-- hPa</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="loading" class="loading hidden">
+                        <div class="spinner"></div>
+                    </div>
+                    
+                    <div id="error-message" class="error-message hidden">
+                        <p>Cidade não encontrada. Verifique o nome e tente novamente.</p>
+                    </div>
+                    
+                    <div id="initial-message" class="initial-message">
+                        <p>Digite o nome de uma cidade para ver a previsão do tempo</p>
+                    </div>
+                </div>
+            </main>
+            
+            <footer>
+                <p>Desenvolvido com ❤️ | Dados fornecidos por OpenWeatherMap</p>
+            </footer>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
+
+
