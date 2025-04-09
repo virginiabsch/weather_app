@@ -1,0 +1,1 @@
+Aplicação web de previsão do tempo com HTML, CSS e JavaScript. Consome a API OpenWeatherMap, apresenta design responsivo e tema dinâmico que muda conforme o clima atual. Utiliza glassmorphism e gradientes para uma experiência visual moderna e imersiva.
